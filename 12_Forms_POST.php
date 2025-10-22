@@ -7,13 +7,6 @@
 // sensitive data
 // multi-part functionality, files as images
 ?>
-
-<h2>Email Submission Form</h2>
-<form action="12_Forms_POST.php" method="post">
-  Email: <input type="text" name="email">
-  <input type="submit" value="Submit">
-</form>
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
@@ -21,6 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     var_dump ($_SERVER);
 }
 ?>
+
+<h2>Email Submission Form</h2>
+<form action="12_Forms_POST.php" method="post">
+  Email: <input type="text" name="email">
+  <input type="submit" value="Submit">
+</form>
+
 
 </body>
 </html>

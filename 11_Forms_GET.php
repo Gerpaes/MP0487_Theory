@@ -8,19 +8,23 @@
 // limit input data
 // possible bookmark page
 ?>
-
-<h2>Simple Greeting Form</h2>
-<form action="11_Forms_GET.php" method="get">
-  Name: <input type="text" name="name">
-  <input type="submit" value="Submit">
-</form>
-
 <?php
 if (isset($_GET['name'])) {
     $name = htmlspecialchars($_GET['name']);
-    echo "<h3>Hello, $name!</h3>";
+    $surname = htmlspecialchars($_GET['surname']);
+    echo "<h3>Hello, $name . $surname!</h3>";
 }
 ?>
+
+<h2>Simple Greeting Form</h2>
+<form method="get">
+  Name: <input type="text" name="name">
+  SurName: <input type="text" name="surname">
+  num1: <input type="number" name="number1">
+  num2: <input type="number" name="number2">
+  <input type="submit" value="Submit">
+</form>
+
 
 </body>
 </html>
